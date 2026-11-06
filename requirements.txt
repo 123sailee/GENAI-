@@ -1,0 +1,2 @@
+# WeekendYatri dependencies
+# Currently using Python standard library only.
