@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Bari village by road; trek to the summit.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 2,
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach via Igatpuri or Ghoti by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+        "verified_in_sources": [
+            "maharashtra_ahilyanagar.html",
+            "maharashtra_nashik.html"
+        ]
+    },
+    {
+        "id": 3,
+        "place": "Mula Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach the dam area by road from Rahuri.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/mula-dam/",
+        "verified_in_sources": [
+            "maharashtra_ahilyanagar.html"
+        ]
+    },
+    {
+        "id": 4,
+        "place": "Nilwande Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach the dam area by road from the Akole region.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 5,
+        "place": "Harishchandragad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "winter",
+        "how_to_reach": "Reach Khireshwar or another established base village and trek.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "verified_in_sources": [
+            "maharashtra_ahilyanagar.html"
+        ]
+    },
+    {
+        "id": 6,
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Ratanwadi village and trek to the fort.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "verified_in_sources": [
+            "maharashtra_ahilyanagar.html"
+        ]
+    },
+    {
+        "id": 7,
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "winter",
+        "how_to_reach": "Reach Samrad village and arrange a guided trek.",
+        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+        "verified_in_sources": [
+            "maharashtra_ahilyanagar.html"
+        ]
+    },
+    {
+        "id": 8,
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "winter",
+        "how_to_reach": "Reach Rehkuri village by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "verified_in_sources": [
+            "maharashtra_ahilyanagar.html"
+        ]
+    },
+    {
+        "id": 9,
+        "place": "Trimbakeshwar Temple",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter",
+        "how_to_reach": "Approximately 28 km from Nashik; buses and road transport available.",
+        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+        "verified_in_sources": [
+            "maharashtra_nashik.html",
+            "nashik_tourism.html"
+        ]
+    },
+    {
+        "id": 10,
+        "place": "Kushavart Tirtha",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter",
+        "how_to_reach": "Located in Trimbakeshwar town, near Trimbakeshwar Temple.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "verified_in_sources": [
+            "maharashtra_nashik.html",
+            "nashik_tourism.html"
+        ]
+    },
+    {
+        "id": 11,
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Reach the Pandavleni hill area by road from Nashik city.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "verified_in_sources": [
+            "maharashtra_nashik.html"
+        ]
+    },
+    {
+        "id": 12,
+        "place": "Dugarwadi Falls",
+        "district": "Nashik",
+        "category": "nature",
+        "best_season": "monsoon",
+        "how_to_reach": "Reach via Trimbakeshwar and continue towards the waterfall.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 13,
+        "place": "Someshwar",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter and monsoon",
+        "how_to_reach": "Approximately 8 km from Nashik Central Bus Stand.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "verified_in_sources": [
+            "maharashtra_nashik.html",
+            "nashik_tourism.html"
+        ]
+    },
+    {
+        "id": 14,
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "all year",
+        "how_to_reach": "Located in Sinnar; accessible by road from Nashik.",
+        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 15,
+        "place": "Anjaneri Hills",
+        "district": "Nashik",
+        "category": "adventure",
+        "best_season": "winter and monsoon",
+        "how_to_reach": "Reach Anjaneri village by road and trek uphill.",
+        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 16,
+        "place": "Daulatabad Fort",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located near Daulatabad village; accessible by road.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 17,
+        "place": "Bibi Ka Maqbara",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by local transport.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 18,
+        "place": "Panchakki",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by road.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 19,
+        "place": "Salim Ali Lake",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "nature",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by local transport.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "verified_in_sources": []
+    },
+    {
+        "id": 20,
+        "place": "Mhaismal Hill Station",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Mhaismal via Ellora by road.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "verified_in_sources": []
+    }
+]
