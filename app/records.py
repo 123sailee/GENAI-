@@ -129,3 +129,27 @@ def clean_records(records):
     print("\nData cleaning completed!")
 
     return records
+
+def filter_by_category(records, category):
+    category = category.lower().strip()
+
+    return [
+        record for record in records
+        if record.category.lower() == category
+    ]
+
+
+def filter_by_district(records, district):
+    district = district.lower().strip()
+
+    return [
+        record for record in records
+        if record.district.lower() == district
+    ]
+
+def sort_by_place(records, reverse=False):
+    return sorted(
+        records,
+        key=lambda record: record.place.lower(),
+        reverse=reverse
+    )
