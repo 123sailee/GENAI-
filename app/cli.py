@@ -1,14 +1,15 @@
-
 from app.records import (
     load_records,
     search,
     count_by,
     get_by_id,
+    clean_records,
 )
 
 
 def main():
     records = load_records()
+    clean_records(records)
 
     while True:
         print("\n========== WEEKENDYATRI ==========")
