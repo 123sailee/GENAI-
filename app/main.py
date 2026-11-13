@@ -8,6 +8,7 @@ from app.records import load_records
 from app.smart_search import search_destinations
 from app.llm import generate_response, load_system_prompt
 
+
 app = FastAPI(
     title="WeekendYatri API",
     description="AI-powered weekend travel destination assistant",
@@ -23,7 +24,7 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
-    confidence: float = Field(ge=0, le=1)
+    retrieval_score: float = Field(ge=0, le=1)
     follow_up: str
 
 
@@ -82,7 +83,10 @@ def search_records(q: str):
 def chat_with_yatri(request: ChatRequest):
 
     # Step 1: Retrieve relevant destinations
-    results = search_destinations(request.message, top_n=5)
+    results = search_destinations(
+        request.message,
+        top_n=5
+    )
 
     if not results:
         return ChatResponse(
@@ -91,21 +95,30 @@ def chat_with_yatri(request: ChatRequest):
                 "current database. Try mentioning a district, "
                 "season, or destination category."
             ),
-            confidence=0.0,
-            follow_up="Which district or type of destination interests you?"
+            retrieval_score=0.0,
+            follow_up=(
+                "Which district or type of destination interests you?"
+            )
         )
 
-    # Step 2: Load complete destination information
+    # Step 2: Calculate retrieval score in Python
+    retrieval_score = max(
+        item["similarity_score"] for item in results
+    )
+
+    # Step 3: Load complete destination information
     records = load_records()
 
-    retrieved_places = {item["place"] for item in results}
+    retrieved_places = {
+        item["place"] for item in results
+    }
 
     context_records = [
         record for record in records
         if record.place in retrieved_places
     ]
 
-    # Step 3: Build context for the LLM
+    # Step 4: Build context for the LLM
     context = [
         {
             "place": record.place,
@@ -119,22 +132,23 @@ def chat_with_yatri(request: ChatRequest):
         for record in context_records
     ]
 
-    # Step 4: Prepare the grounded prompt
+    # Step 5: Prepare the grounded prompt
     system_prompt = load_system_prompt()
 
     user_message = f"""
-    Retrieved destination information:
+Retrieved destination information:
 
-    {json.dumps(context, ensure_ascii=False, indent=2)}
+{json.dumps(context, ensure_ascii=False, indent=2)}
 
-    User question:
-    {request.message}
+User question:
+{request.message}
 
-    Use only the retrieved information to answer.
-    Return the required JSON response.
-    """
+Use only the retrieved information to answer.
+Return the required JSON response with answer and follow_up.
+Do not include a confidence or retrieval score.
+"""
 
-    # Step 5: Generate AI response
+    # Step 6: Generate AI response
     try:
         llm_response = generate_response(
             system_prompt,
@@ -143,9 +157,13 @@ def chat_with_yatri(request: ChatRequest):
 
         parsed_response = json.loads(llm_response)
 
-        return ChatResponse(**parsed_response)
+        return ChatResponse(
+            answer=parsed_response["answer"],
+            retrieval_score=retrieval_score,
+            follow_up=parsed_response["follow_up"]
+        )
 
-    except (json.JSONDecodeError, ValueError) as error:
+    except (json.JSONDecodeError, KeyError, ValueError) as error:
         raise HTTPException(
             status_code=502,
             detail=f"Invalid response from AI model: {str(error)}"
