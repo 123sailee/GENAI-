@@ -10,7 +10,8 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 URLS = {
     "nashik_tourism": "https://nashik.gov.in/en/tourism/tourists-places/",
     "maharashtra_nashik": "https://maharashtratourism.gov.in/districts/nashik/",
-    "maharashtra_ahilyanagar": "https://maharashtratourism.gov.in/districts/ahilya-nagar/"
+    "maharashtra_ahilyanagar": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+    "bhandardara": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/"
 }
 
 

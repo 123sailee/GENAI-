@@ -12,3 +12,4 @@ class Record:
     how_to_reach: str
     source_url: str
     verified_in_sources: list[str] = field(default_factory=list)
+    official_details: dict = field(default_factory=dict)
