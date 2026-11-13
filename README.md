@@ -50,3 +50,53 @@ Build a complete AI-powered travel assistant that helps users discover affordabl
 
 **Repository:** GENAI-  
 **Developer:** Sailee Abhale
+
+## 8. How to Run
+
+### Prerequisites
+- Python 3.11
+- Git
+- Groq API key
+
+### 1. Clone the repository
+```bash
+git clone <your-repository-url>
+cd GENAI-
+```
+
+### 2. Create and activate a virtual environment
+**Windows PowerShell:**
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+Copy `.env.example` to `.env` and add your Groq API key:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=openai/gpt-oss-20b
+```
+
+Keep your actual `.env` file private. Do not commit API keys to GitHub.
+
+### 5. Start the FastAPI server
+```bash
+uvicorn app.main:app --reload
+```
+
+### 6. Open the API documentation
+
+Visit:
+
+- http://127.0.0.1:8000/docs
+- http://127.0.0.1:8000/health
+
+The interactive Swagger documentation allows you to test the available API endpoints.

@@ -58,17 +58,13 @@ def get_record(record_id: int):
     )
 
 
+
 @app.get("/search")
 def search_records(q: str):
-    records = load_records()
-    query = q.lower().strip()
-
-    results = [
-        record for record in records
-        if query in record.place.lower()
-        or query in record.district.lower()
-        or query in record.category.lower()
-    ]
+    results = search_destinations(
+        q,
+        top_n=20
+    )
 
     return {
         "query": q,
@@ -77,8 +73,10 @@ def search_records(q: str):
     }
 
 
+
 # ---------- AI Chat Endpoint ----------
 
+@app.post("/questions", response_model=ChatResponse)
 @app.post("/chat", response_model=ChatResponse)
 def chat_with_yatri(request: ChatRequest):
 
