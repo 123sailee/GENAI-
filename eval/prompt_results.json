@@ -1,0 +1,976 @@
+[
+  {
+    "question_number": 1,
+    "question": "Which destinations are available in Nashik district?",
+    "retrieved_destinations": [
+      {
+        "place": "Trimbakeshwar Temple",
+        "district": "Nashik",
+        "category": "religious",
+        "similarity_score": 1.0
+      },
+      {
+        "place": "Kushavart Tirtha",
+        "district": "Nashik",
+        "category": "religious",
+        "similarity_score": 1.0
+      },
+      {
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "similarity_score": 1.0
+      },
+      {
+        "place": "Dugarwadi Falls",
+        "district": "Nashik",
+        "category": "nature",
+        "similarity_score": 1.0
+      },
+      {
+        "place": "Someshwar",
+        "district": "Nashik",
+        "category": "religious",
+        "similarity_score": 1.0
+      },
+      {
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "similarity_score": 1.0
+      },
+      {
+        "place": "Anjaneri Hills",
+        "district": "Nashik",
+        "category": "adventure",
+        "similarity_score": 1.0
+      }
+    ],
+    "context": [
+      {
+        "place": "Trimbakeshwar Temple",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter",
+        "how_to_reach": "Approximately 28 km from Nashik; buses and road transport available.",
+        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Kushavart Tirtha",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter",
+        "how_to_reach": "Located in Trimbakeshwar town, near Trimbakeshwar Temple.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      },
+      {
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Reach the Pandavleni hill area by road from Nashik city.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      },
+      {
+        "place": "Dugarwadi Falls",
+        "district": "Nashik",
+        "category": "nature",
+        "best_season": "monsoon",
+        "how_to_reach": "Reach via Trimbakeshwar and continue towards the waterfall.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      },
+      {
+        "place": "Someshwar",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter and monsoon",
+        "how_to_reach": "Approximately 8 km from Nashik Central Bus Stand.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      },
+      {
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "all year",
+        "how_to_reach": "Located in Sinnar; accessible by road from Nashik.",
+        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Anjaneri Hills",
+        "district": "Nashik",
+        "category": "adventure",
+        "best_season": "winter and monsoon",
+        "how_to_reach": "Reach Anjaneri village by road and trek uphill.",
+        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "The following destinations are located in Nashik district:\n1. Trimbakeshwar Temple (religious)\n2. Kushavart Tirtha (religious)\n3. Pandavleni Caves (heritage)\n4. Dugarwadi Falls (nature)\n5. Someshwar (religious)\n6. Gargoti Museum (heritage)\n7. Anjaneri Hills (adventure)",
+        "confidence": 0.99,
+        "follow_up": "Would you like to know more about any specific category or season for these destinations?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "The following destinations are located in Nashik district: Trimbakeshwar Temple, Kushavart Tirtha, Pandavleni Caves, Dugarwadi Falls, Someshwar, Gargoti Museum, and Anjaneri Hills.",
+        "follow_up": "Would you like more details about any of these destinations?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 2,
+    "question": "Which destinations are classified under the adventure category?",
+    "retrieved_destinations": [
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.328
+      },
+      {
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.314
+      },
+      {
+        "place": "Nilwande Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.264
+      },
+      {
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.185
+      },
+      {
+        "place": "Harishchandragad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.169
+      }
+    ],
+    "context": [
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Bari village by road; trek to the summit.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+        "official_details": {}
+      },
+      {
+        "place": "Nilwande Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach the dam area by road from the Akole region.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Harishchandragad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "winter",
+        "how_to_reach": "Reach Khireshwar or another established base village and trek.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Ratanwadi village and trek to the fort.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "winter",
+        "how_to_reach": "Reach Samrad village and arrange a guided trek.",
+        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "The adventure category destinations are: Kalsubai Mountain, Harishchandragad Fort, Ratangad Fort, and Sandhan Valley.",
+        "confidence": 0.9,
+        "follow_up": "Would you like more details about any of these places?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Kalsubai Mountain, Harishchandragad Fort, Ratangad Fort, and Sandhan Valley – all are listed with the category \"adventure\" in the retrieved data.",
+        "follow_up": "Would you like more details about any of these adventure destinations?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 3,
+    "question": "Which district has the highest number of destinations?",
+    "retrieved_destinations": [],
+    "context": {
+      "total_destinations": 20,
+      "district_wise_counts": {
+        "Ahilyanagar": 8,
+        "Nashik": 7,
+        "Chhatrapati Sambhajinagar": 5
+      }
+    },
+    "v1": {
+      "response": {
+        "answer": "Ahilyanagar has the highest number of destinations with 8.",
+        "confidence": 1.0,
+        "follow_up": "Would you like to know more about the destinations in Ahilyanagar?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Ahilyanagar has the highest number of destinations with 8 destinations.",
+        "follow_up": "Would you like to know more about the destinations in Ahilyanagar?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 4,
+    "question": "Suggest some nature destinations in Ahilyanagar.",
+    "retrieved_destinations": [
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.218
+      },
+      {
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "similarity_score": 0.214
+      },
+      {
+        "place": "Kushavart Tirtha",
+        "district": "Nashik",
+        "category": "religious",
+        "similarity_score": 0.213
+      },
+      {
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.196
+      },
+      {
+        "place": "Mula Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.189
+      }
+    ],
+    "context": [
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach via Igatpuri or Ghoti by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+        "official_details": {
+          "place": "Bhandardara",
+          "category": "Natural / Scenic beauty, Recreational",
+          "description": [
+            "Bhandardara Dam also known as Wilson Dam has its existence on Pravara River and is situated 150 metres above ground level. This dam is located in holiday resort village of Bhandardara on the western coast of India. This lies in Ahmednagar district of Maharashtra.Arthur Lake is formed due to the construction of Wilson Dam and is fed by Pravara River. This lake is also known as Lake Arthur Hill or Bhandardara Lake.Bhandardara is among the major tourist attractions in India and has the presence of natural beauty, waterfalls, mountains, greenery, invigorating air and pristine ambience.",
+            "A huge waterfall in Randha village on Pravara river, 10 km away from the village of Shendi, is famous as the Randhha Falls, following the name of the village. Currently, this waterfall is found only in rainy season due to hydropower project. During the rainy season, the waterfall forms a very hug. On the right side of the main waterfall in the rainy season, another waterfall is seen. Watching both waterfalls s a thrilling experience.10 km from Bhandardara bus stand, 156 km from Pune and 177 km from Mumbai, Randhada waterfalls are in Ahmednagar district of Maharashtra.",
+            "A large circular waterfall on Wilson Damm,  known as ‘umbrella fall’ due to its characteristic shape. This umbrella falls seen only in the months from July to October.Around 500 meters from the Bhandardara bus station, the Ambrella Falls is a beautiful Seasonal waterfalls situated at Bhandaranara (Wilson) in Ahmednagar district.",
+            "Nearest airports are Aurangabad and Pune. Airport Shirdi (limited flights).",
+            "Ahmednagar is nearest railway station.",
+            "Regular State Transport Buses are available from Any Maharashtra State Road Transport Corporation Bus Stand."
+          ]
+        }
+      },
+      {
+        "place": "Mula Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach the dam area by road from Rahuri.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/mula-dam/",
+        "official_details": {}
+      },
+      {
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "winter",
+        "how_to_reach": "Reach Rehkuri village by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Kushavart Tirtha",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter",
+        "how_to_reach": "Located in Trimbakeshwar town, near Trimbakeshwar Temple.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      },
+      {
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "all year",
+        "how_to_reach": "Located in Sinnar; accessible by road from Nashik.",
+        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "Here are the nature destinations in Ahilyanagar you can consider:\n1. **Bhandardara** – A scenic hill station with waterfalls, a dam, and lush greenery. Best visited during monsoon and winter.\n2. **Mula Dam** – A natural water reservoir located near Rahuri, ideal for nature walks and bird watching. Also best in monsoon and winter.\n3. **Rehkuri Blackbuck Sanctuary** – A wildlife sanctuary where you can spot blackbucks and other fauna, especially pleasant in winter.\n\nAll three places are accessible by road and offer natural beauty, making them great weekend options.",
+        "confidence": 0.9,
+        "follow_up": "Do you have a preferred budget or travel time that I should keep in mind while planning?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Here are nature destinations in Ahilyanagar:\n- **Bhandardara** – Famous for its waterfalls (Randhha Falls, Umbrella Falls), Wilson Dam, and Arthur Lake, offering scenic beauty and greenery.\n- **Mula Dam** – A natural spot accessible by road from Rahuri, ideal for nature lovers.\n- **Rehkuri Blackbuck Sanctuary** – A wildlife sanctuary in Rehkuri village, great for observing blackbucks and other fauna.\nEach of these places is categorized as nature and is located within Ahilyanagar district.",
+        "follow_up": "Would you like more details about any of these destinations?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 5,
+    "question": "Which destinations are suitable for visiting during winter?",
+    "retrieved_destinations": [
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.132
+      },
+      {
+        "place": "Panchakki",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "similarity_score": 0.132
+      },
+      {
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.124
+      },
+      {
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.119
+      },
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.117
+      }
+    ],
+    "context": [
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Bari village by road; trek to the summit.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+        "official_details": {}
+      },
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach via Igatpuri or Ghoti by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+        "official_details": {
+          "place": "Bhandardara",
+          "category": "Natural / Scenic beauty, Recreational",
+          "description": [
+            "Bhandardara Dam also known as Wilson Dam has its existence on Pravara River and is situated 150 metres above ground level. This dam is located in holiday resort village of Bhandardara on the western coast of India. This lies in Ahmednagar district of Maharashtra.Arthur Lake is formed due to the construction of Wilson Dam and is fed by Pravara River. This lake is also known as Lake Arthur Hill or Bhandardara Lake.Bhandardara is among the major tourist attractions in India and has the presence of natural beauty, waterfalls, mountains, greenery, invigorating air and pristine ambience.",
+            "A huge waterfall in Randha village on Pravara river, 10 km away from the village of Shendi, is famous as the Randhha Falls, following the name of the village. Currently, this waterfall is found only in rainy season due to hydropower project. During the rainy season, the waterfall forms a very hug. On the right side of the main waterfall in the rainy season, another waterfall is seen. Watching both waterfalls s a thrilling experience.10 km from Bhandardara bus stand, 156 km from Pune and 177 km from Mumbai, Randhada waterfalls are in Ahmednagar district of Maharashtra.",
+            "A large circular waterfall on Wilson Damm,  known as ‘umbrella fall’ due to its characteristic shape. This umbrella falls seen only in the months from July to October.Around 500 meters from the Bhandardara bus station, the Ambrella Falls is a beautiful Seasonal waterfalls situated at Bhandaranara (Wilson) in Ahmednagar district.",
+            "Nearest airports are Aurangabad and Pune. Airport Shirdi (limited flights).",
+            "Ahmednagar is nearest railway station.",
+            "Regular State Transport Buses are available from Any Maharashtra State Road Transport Corporation Bus Stand."
+          ]
+        }
+      },
+      {
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "winter",
+        "how_to_reach": "Reach Samrad village and arrange a guided trek.",
+        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+        "official_details": {}
+      },
+      {
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "winter",
+        "how_to_reach": "Reach Rehkuri village by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Panchakki",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by road.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "The following destinations from the retrieved list are suitable for visiting during winter:\n\n1. **Kalsubai Mountain** – Adventure; best season includes winter.\n2. **Bhandardara** – Nature; best season includes winter.\n3. **Sandhan Valley** – Adventure; best season is winter.\n4. **Rehkuri Blackbuck Sanctuary** – Nature; best season is winter.\n5. **Panchakki** – Heritage; best season is winter.\n\nAll of these places are marked as having winter as a good season to visit, making them ideal for a winter weekend getaway.",
+        "confidence": 0.9,
+        "follow_up": "Could you let me know your budget range or preferred travel time so I can narrow down the best option for you?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Destinations suitable for visiting during winter:\n- **Kalsubai Mountain** – listed as best season winter (and monsoon). Ideal for trekking.\n- **Bhandardara** – best season winter. Offers waterfalls, lakes, and scenic nature.\n- **Sandhan Valley** – best season winter. Popular for guided treks.\n- **Rehkuri Blackbuck Sanctuary** – best season winter. Good for wildlife viewing.\n- **Panchakki** – best season winter. Heritage site within Sambhajinagar.\n\nAll these places are marked as suitable for winter visits in the retrieved data.\n",
+        "follow_up": "Would you like more information about any particular destination from this list?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 6,
+    "question": "What is the current bus fare from Nashik to Bhandardara?",
+    "retrieved_destinations": [
+      {
+        "place": "Someshwar",
+        "district": "Nashik",
+        "category": "religious",
+        "similarity_score": 0.361
+      },
+      {
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "similarity_score": 0.233
+      },
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.21
+      },
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.204
+      },
+      {
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.201
+      }
+    ],
+    "context": [
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Bari village by road; trek to the summit.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+        "official_details": {}
+      },
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach via Igatpuri or Ghoti by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+        "official_details": {
+          "place": "Bhandardara",
+          "category": "Natural / Scenic beauty, Recreational",
+          "description": [
+            "Bhandardara Dam also known as Wilson Dam has its existence on Pravara River and is situated 150 metres above ground level. This dam is located in holiday resort village of Bhandardara on the western coast of India. This lies in Ahmednagar district of Maharashtra.Arthur Lake is formed due to the construction of Wilson Dam and is fed by Pravara River. This lake is also known as Lake Arthur Hill or Bhandardara Lake.Bhandardara is among the major tourist attractions in India and has the presence of natural beauty, waterfalls, mountains, greenery, invigorating air and pristine ambience.",
+            "A huge waterfall in Randha village on Pravara river, 10 km away from the village of Shendi, is famous as the Randhha Falls, following the name of the village. Currently, this waterfall is found only in rainy season due to hydropower project. During the rainy season, the waterfall forms a very hug. On the right side of the main waterfall in the rainy season, another waterfall is seen. Watching both waterfalls s a thrilling experience.10 km from Bhandardara bus stand, 156 km from Pune and 177 km from Mumbai, Randhada waterfalls are in Ahmednagar district of Maharashtra.",
+            "A large circular waterfall on Wilson Damm,  known as ‘umbrella fall’ due to its characteristic shape. This umbrella falls seen only in the months from July to October.Around 500 meters from the Bhandardara bus station, the Ambrella Falls is a beautiful Seasonal waterfalls situated at Bhandaranara (Wilson) in Ahmednagar district.",
+            "Nearest airports are Aurangabad and Pune. Airport Shirdi (limited flights).",
+            "Ahmednagar is nearest railway station.",
+            "Regular State Transport Buses are available from Any Maharashtra State Road Transport Corporation Bus Stand."
+          ]
+        }
+      },
+      {
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Ratanwadi village and trek to the fort.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Reach the Pandavleni hill area by road from Nashik city.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      },
+      {
+        "place": "Someshwar",
+        "district": "Nashik",
+        "category": "religious",
+        "best_season": "winter and monsoon",
+        "how_to_reach": "Approximately 8 km from Nashik Central Bus Stand.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "I’m sorry, but the retrieved information does not include the current bus fare from Nashik to Bhandardara.",
+        "confidence": 0.2,
+        "follow_up": "Would you like to know the approximate travel time or how to reach Bhandardara from Nashik instead?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "The information about the current bus fare from Nashik to Bhandardara is not available in the retrieved data.",
+        "follow_up": "Would you like help exploring another available destination or preference?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 7,
+    "question": "How can I reach Pandavleni Caves?",
+    "retrieved_destinations": [
+      {
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "similarity_score": 0.675
+      },
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.053
+      },
+      {
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.05
+      },
+      {
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.048
+      },
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.047
+      }
+    ],
+    "context": [
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Bari village by road; trek to the summit.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+        "official_details": {}
+      },
+      {
+        "place": "Bhandardara",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach via Igatpuri or Ghoti by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+        "official_details": {
+          "place": "Bhandardara",
+          "category": "Natural / Scenic beauty, Recreational",
+          "description": [
+            "Bhandardara Dam also known as Wilson Dam has its existence on Pravara River and is situated 150 metres above ground level. This dam is located in holiday resort village of Bhandardara on the western coast of India. This lies in Ahmednagar district of Maharashtra.Arthur Lake is formed due to the construction of Wilson Dam and is fed by Pravara River. This lake is also known as Lake Arthur Hill or Bhandardara Lake.Bhandardara is among the major tourist attractions in India and has the presence of natural beauty, waterfalls, mountains, greenery, invigorating air and pristine ambience.",
+            "A huge waterfall in Randha village on Pravara river, 10 km away from the village of Shendi, is famous as the Randhha Falls, following the name of the village. Currently, this waterfall is found only in rainy season due to hydropower project. During the rainy season, the waterfall forms a very hug. On the right side of the main waterfall in the rainy season, another waterfall is seen. Watching both waterfalls s a thrilling experience.10 km from Bhandardara bus stand, 156 km from Pune and 177 km from Mumbai, Randhada waterfalls are in Ahmednagar district of Maharashtra.",
+            "A large circular waterfall on Wilson Damm,  known as ‘umbrella fall’ due to its characteristic shape. This umbrella falls seen only in the months from July to October.Around 500 meters from the Bhandardara bus station, the Ambrella Falls is a beautiful Seasonal waterfalls situated at Bhandaranara (Wilson) in Ahmednagar district.",
+            "Nearest airports are Aurangabad and Pune. Airport Shirdi (limited flights).",
+            "Ahmednagar is nearest railway station.",
+            "Regular State Transport Buses are available from Any Maharashtra State Road Transport Corporation Bus Stand."
+          ]
+        }
+      },
+      {
+        "place": "Sandhan Valley",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "winter",
+        "how_to_reach": "Reach Samrad village and arrange a guided trek.",
+        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+        "official_details": {}
+      },
+      {
+        "place": "Rehkuri Blackbuck Sanctuary",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "winter",
+        "how_to_reach": "Reach Rehkuri village by road.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Pandavleni Caves",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Reach the Pandavleni hill area by road from Nashik city.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "From Nashik city, you can reach the Pandavleni Caves by traveling to the Pandavleni hill area via road. Local buses or taxis are available to take you to the hill area where the caves are located.",
+        "confidence": 0.9,
+        "follow_up": "Would you like details on the best transport options or approximate travel time from Nashik?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Reach the Pandavleni hill area by road from Nashik city.",
+        "follow_up": "Would you like help with directions from Nashik city to the Pandavleni hill area?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 8,
+    "question": "Which heritage destinations are available in Chhatrapati Sambhajinagar?",
+    "retrieved_destinations": [
+      {
+        "place": "Panchakki",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "similarity_score": 0.411
+      },
+      {
+        "place": "Bibi Ka Maqbara",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "similarity_score": 0.333
+      },
+      {
+        "place": "Daulatabad Fort",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "similarity_score": 0.264
+      },
+      {
+        "place": "Salim Ali Lake",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "nature",
+        "similarity_score": 0.251
+      },
+      {
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "similarity_score": 0.228
+      }
+    ],
+    "context": [
+      {
+        "place": "Gargoti Museum",
+        "district": "Nashik",
+        "category": "heritage",
+        "best_season": "all year",
+        "how_to_reach": "Located in Sinnar; accessible by road from Nashik.",
+        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Daulatabad Fort",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located near Daulatabad village; accessible by road.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "official_details": {}
+      },
+      {
+        "place": "Bibi Ka Maqbara",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by local transport.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "official_details": {}
+      },
+      {
+        "place": "Panchakki",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "heritage",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by road.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "official_details": {}
+      },
+      {
+        "place": "Salim Ali Lake",
+        "district": "Chhatrapati Sambhajinagar",
+        "category": "nature",
+        "best_season": "winter",
+        "how_to_reach": "Located within Sambhajinagar city; accessible by local transport.",
+        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "The heritage destinations in Chhatrapati Sambhajinagar are: Daulatabad Fort, Bibi Ka Maqbara, and Panchakki.",
+        "confidence": 1.0,
+        "follow_up": "Would you like information on how to reach these places or details about the best time to visit?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "The heritage destinations in Chhatrapati Sambhajinagar are Daulatabad Fort, Bibi Ka Maqbara, and Panchakki.",
+        "follow_up": "Would you like details about any of these sites or other attractions in the area?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 9,
+    "question": "Suggest destinations suitable for the monsoon season.",
+    "retrieved_destinations": [
+      {
+        "place": "Nilwande Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.4
+      },
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.29
+      },
+      {
+        "place": "Dugarwadi Falls",
+        "district": "Nashik",
+        "category": "nature",
+        "similarity_score": 0.288
+      },
+      {
+        "place": "Mula Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "similarity_score": 0.283
+      },
+      {
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "similarity_score": 0.278
+      }
+    ],
+    "context": [
+      {
+        "place": "Kalsubai Mountain",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Bari village by road; trek to the summit.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+        "official_details": {}
+      },
+      {
+        "place": "Mula Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach the dam area by road from Rahuri.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/mula-dam/",
+        "official_details": {}
+      },
+      {
+        "place": "Nilwande Dam",
+        "district": "Ahilyanagar",
+        "category": "nature",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach the dam area by road from the Akole region.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Ratangad Fort",
+        "district": "Ahilyanagar",
+        "category": "adventure",
+        "best_season": "monsoon and winter",
+        "how_to_reach": "Reach Ratanwadi village and trek to the fort.",
+        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+        "official_details": {}
+      },
+      {
+        "place": "Dugarwadi Falls",
+        "district": "Nashik",
+        "category": "nature",
+        "best_season": "monsoon",
+        "how_to_reach": "Reach via Trimbakeshwar and continue towards the waterfall.",
+        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+        "official_details": {}
+      }
+    ],
+    "v1": {
+      "response": {
+        "answer": "Here are the destinations from the retrieved list that are best suited for the monsoon season:\n\n1. **Kalsubai Mountain** – Adventure; best season: monsoon and winter.\n2. **Mula Dam** – Nature; best season: monsoon and winter.\n3. **Nilwande Dam** – Nature; best season: monsoon and winter.\n4. **Ratangad Fort** – Adventure; best season: monsoon and winter.\n5. **Dugarwadi Falls** – Nature; best season: monsoon.\n\nAll of these places are highlighted in the source as ideal during monsoon, offering lush scenery, trekking opportunities, and water‑related activities.\n",
+        "confidence": 0.9,
+        "follow_up": "Would you like recommendations based on a specific budget or travel time from your location?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Kalsubai Mountain – adventure trek suitable for monsoon and winter.\nMula Dam – nature spot best visited in monsoon and winter.\nNilwande Dam – nature destination ideal for monsoon and winter.\nRatangad Fort – adventure trek suitable for monsoon and winter.\nDugarwadi Falls – nature waterfall best seen in monsoon.",
+        "follow_up": "Would you like more details about any of these destinations?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  },
+  {
+    "question_number": 10,
+    "question": "How many destinations are available in each district?",
+    "retrieved_destinations": [],
+    "context": {
+      "total_destinations": 20,
+      "district_wise_counts": {
+        "Ahilyanagar": 8,
+        "Nashik": 7,
+        "Chhatrapati Sambhajinagar": 5
+      }
+    },
+    "v1": {
+      "response": {
+        "answer": "Ahilyanagar: 8 destinations, Nashik: 7 destinations, Chhatrapati Sambhajinagar: 5 destinations.",
+        "confidence": 1.0,
+        "follow_up": "Would you like details about any specific district or destination?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    },
+    "v2": {
+      "response": {
+        "answer": "Ahilyanagar: 8, Nashik: 7, Chhatrapati Sambhajinagar: 5",
+        "follow_up": "Would you like to know more about any specific district?"
+      },
+      "json_valid": true,
+      "fields_valid": true,
+      "confidence_valid": true,
+      "error": null
+    }
+  }
+]

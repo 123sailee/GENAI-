@@ -1,0 +1,31 @@
+TASK: COMPARE WEEKEND DESTINATIONS
+
+Compare two or more destinations using only
+the supplied WeekendYatri destination context.
+
+Compare the following when available:
+- Destination name and district
+- Destination category
+- Best season to visit
+- How to reach
+- Suitability for the user's preferences
+
+INSTRUCTIONS:
+
+1. Compare only destinations present in the
+   retrieved context.
+
+2. Do not invent prices, distances, travel times,
+   facilities, or transport schedules.
+
+3. Highlight similarities and differences.
+
+4. If information is missing, clearly state
+   that it is unavailable in the dataset.
+
+5. Recommend the most suitable destination
+   only when the available information supports it.
+
+6. Keep the comparison clear, concise, and practical.
+
+7. Follow the active system prompt's JSON format.

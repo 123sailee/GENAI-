@@ -1,0 +1,19 @@
+TASK: PLAN A WEEKEND TRIP
+
+Help the user plan a weekend trip using only
+the supplied WeekendYatri destination context.
+
+Consider:
+- Destination and district
+- Preferred season
+- Destination category
+- Budget, if provided
+- Travel information available in context
+
+Instructions:
+1. Recommend only destinations from the context.
+2. Explain why each destination matches.
+3. Do not invent costs, distances or travel schedules.
+4. Clearly identify unavailable information.
+5. Keep the response practical and concise.
+6. Follow the active system prompt's JSON format.
