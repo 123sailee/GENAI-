@@ -1,18 +1,19 @@
 
 import json
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from app.records import load_records
 from app.smart_search import search_destinations
 from app.llm import generate_response, load_system_prompt
+from app.vectorstore import semantic_search as search_semantically
 
 
 app = FastAPI(
     title="WeekendYatri API",
     description="AI-powered weekend travel destination assistant",
-    version="2.0.0"
+    version="2.1.0"
 )
 
 
@@ -58,7 +59,6 @@ def get_record(record_id: int):
     )
 
 
-
 @app.get("/search")
 def search_records(q: str):
     results = search_destinations(
@@ -72,6 +72,66 @@ def search_records(q: str):
         "results": results
     }
 
+
+# ---------- Day 7: Semantic Search Endpoint ----------
+
+@app.get("/search/semantic")
+def semantic_search_records(
+    q: str = Query(min_length=2, max_length=500),
+    top_k: int = Query(default=5, ge=1, le=20)
+):
+    """
+    Search destinations using sentence embeddings
+    and the persistent ChromaDB vector database.
+    """
+
+    try:
+        results = search_semantically(
+            query=q,
+            top_k=top_k
+        )
+
+        documents = results.get("documents", [[]])[0]
+        metadatas = results.get("metadatas", [[]])[0]
+        distances = results.get("distances", [[]])[0]
+
+        formatted_results = []
+
+        for index, document in enumerate(documents):
+
+            metadata = metadatas[index]
+
+            formatted_results.append({
+                "rank": index + 1,
+                "title": metadata.get("title"),
+                "district": metadata.get("district"),
+                "category": metadata.get("category"),
+                "best_season": metadata.get("best_season"),
+                "source_url": metadata.get("source_url"),
+                "cosine_distance": round(
+                    float(distances[index]), 4
+                ),
+                "document": document
+            })
+
+        return {
+            "query": q,
+            "total_results": len(formatted_results),
+            "search_type": "semantic",
+            "results": formatted_results
+        }
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=503,
+            detail=f"Semantic search service error: {str(error)}"
+        )
 
 
 # ---------- AI Chat Endpoint ----------
@@ -99,7 +159,7 @@ def chat_with_yatri(request: ChatRequest):
             )
         )
 
-    # Step 2: Calculate retrieval score in Python
+    # Step 2: Calculate retrieval score
     retrieval_score = max(
         item["similarity_score"] for item in results
     )
