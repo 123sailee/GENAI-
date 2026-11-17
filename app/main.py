@@ -8,12 +8,13 @@ from app.records import load_records
 from app.smart_search import search_destinations
 from app.llm import generate_response, load_system_prompt
 from app.vectorstore import semantic_search as search_semantically
+from app.rag import ask_question
 
 
 app = FastAPI(
     title="WeekendYatri API",
     description="AI-powered weekend travel destination assistant",
-    version="2.1.0"
+    version="2.2.0"
 )
 
 
@@ -27,6 +28,17 @@ class ChatResponse(BaseModel):
     answer: str
     retrieval_score: float = Field(ge=0, le=1)
     follow_up: str
+
+
+class AskRequest(BaseModel):
+    question: str = Field(min_length=2, max_length=1000)
+    top_k: int = Field(default=5, ge=1, le=20)
+
+
+class AskResponse(BaseModel):
+    answer: str
+    citations: list[dict]
+    retrieved_chunks: list[dict]
 
 
 # ---------- Existing API Endpoints ----------
@@ -134,7 +146,7 @@ def semantic_search_records(
         )
 
 
-# ---------- AI Chat Endpoint ----------
+# ---------- Existing AI Chat Endpoint ----------
 
 @app.post("/questions", response_model=ChatResponse)
 @app.post("/chat", response_model=ChatResponse)
@@ -231,4 +243,38 @@ Do not include a confidence or retrieval score.
         raise HTTPException(
             status_code=502,
             detail=f"AI service error: {str(error)}"
+        )
+
+
+# ---------- Day 8: Retrieval-Augmented Generation API ----------
+
+@app.post("/ask", response_model=AskResponse)
+def ask_weekendyatri(request: AskRequest):
+    """
+    Answer WeekendYatri questions using retrieved ChromaDB
+    chunks, Groq generation and source citations.
+    """
+
+    try:
+        result = ask_question(
+            question=request.question,
+            top_k=request.top_k
+        )
+
+        return AskResponse(
+            answer=result["answer"],
+            citations=result["citations"],
+            retrieved_chunks=result["retrieved_chunks"]
+        )
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=502,
+            detail=f"RAG service error: {str(error)}"
         )

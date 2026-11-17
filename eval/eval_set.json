@@ -1,0 +1,93 @@
+
+[
+  {
+    "id": 1,
+    "question": "Suggest adventure destinations suitable for trekking.",
+    "answerable": true,
+    "expected_keywords": ["Kalsubai Mountain", "Harishchandragad Fort", "Anjaneri Hills"]
+  },
+  {
+    "id": 2,
+    "question": "Which nature destinations are available in Ahilyanagar?",
+    "answerable": true,
+    "expected_keywords": ["Rehkuri Blackbuck Sanctuary", "Nilwande Dam", "Mula Dam", "Bhandardara"]
+  },
+  {
+    "id": 3,
+    "question": "Which destinations are suitable for winter?",
+    "answerable": true,
+    "expected_keywords": ["winter", "Harishchandragad Fort", "Rehkuri Blackbuck Sanctuary"]
+  },
+  {
+    "id": 4,
+    "question": "Suggest heritage attractions in Chhatrapati Sambhajinagar.",
+    "answerable": true,
+    "expected_keywords": ["Bibi Ka Maqbara", "Panchakki", "Daulatabad Fort"]
+  },
+  {
+    "id": 5,
+    "question": "Which destinations are suitable for monsoon?",
+    "answerable": true,
+    "expected_keywords": ["Dugarwadi Falls", "Kalsubai Mountain", "Mula Dam"]
+  },
+  {
+    "id": 6,
+    "question": "What is the current bus fare from Nashik to Bhandardara?",
+    "answerable": false,
+    "expected_keywords": []
+  },
+  {
+    "id": 7,
+    "question": "How can I reach Pandavleni Caves?",
+    "answerable": true,
+    "expected_keywords": ["Pandavleni Caves", "Nashik"]
+  },
+  {
+    "id": 8,
+    "question": "Which religious destinations are available near Nashik?",
+    "answerable": true,
+    "expected_keywords": ["Trimbakeshwar Temple", "Someshwar", "Kushavart Tirtha"]
+  },
+  {
+    "id": 9,
+    "question": "Which destinations involve trekking to a hill or fort?",
+    "answerable": true,
+    "expected_keywords": ["Harishchandragad Fort", "Ratangad Fort", "Anjaneri Hills"]
+  },
+  {
+    "id": 10,
+    "question": "Suggest destinations for wildlife and nature lovers.",
+    "answerable": true,
+    "expected_keywords": ["Rehkuri Blackbuck Sanctuary", "nature"]
+  },
+  {
+    "id": 11,
+    "question": "Which destinations have historical architecture?",
+    "answerable": true,
+    "expected_keywords": ["Pandavleni Caves", "Bibi Ka Maqbara", "Daulatabad Fort"]
+  },
+  {
+    "id": 12,
+    "question": "Suggest weekend destinations around Nashik.",
+    "answerable": true,
+    "expected_keywords": ["Someshwar", "Dugarwadi Falls", "Trimbakeshwar Temple"]
+  },
+  {
+    "id": 13,
+    "question": "How can I reach Kalsubai Mountain?",
+    "answerable": true,
+    "expected_keywords": ["Kalsubai Mountain", "Bari village", "trek"]
+  },
+  {
+    "id": 14,
+    "question": "Which nature destinations are available in Nashik?",
+    "answerable": true,
+    "expected_keywords": ["Dugarwadi Falls", "Someshwar"]
+  },
+  {
+    "id": 15,
+    "question": "Suggest adventure destinations in Ahilyanagar suitable for winter.",
+    "answerable": true,
+    "expected_keywords": ["Kalsubai Mountain", "Harishchandragad Fort", "Ratangad Fort"]
+  }
+]

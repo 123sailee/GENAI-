@@ -1,0 +1,1007 @@
+{
+    "configuration_a": {
+        "metrics": {
+            "configuration": "Configuration A",
+            "chunk_size": 150,
+            "top_k": 3,
+            "collection_count": 22,
+            "retrieval_recall": 0.7381,
+            "answer_keyword_coverage": 0.6667,
+            "citation_coverage": 0.7444,
+            "unknown_answer_accuracy": 1.0,
+            "average_response_time_seconds": 3.4645,
+            "overall_score": 0.7441
+        },
+        "note": "Previously completed evaluation; aggregate metrics preserved."
+    },
+    "configuration_b": {
+        "metrics": {
+            "configuration": "Configuration B",
+            "chunk_size": 300,
+            "top_k": 5,
+            "collection_count": 21,
+            "retrieval_recall": 0.9167,
+            "answer_keyword_coverage": 0.7976,
+            "citation_coverage": 0.6267,
+            "unknown_answer_accuracy": 1.0,
+            "average_response_time_seconds": 1.2274,
+            "overall_score": 0.8313
+        },
+        "question_results": [
+            {
+                "id": 1,
+                "question": "Suggest adventure destinations suitable for trekking.",
+                "answerable": true,
+                "answer": "Kalsubai Mountain, Harishchandragad Fort, Anjaneri Hills, and Ratangad Fort are adventure destinations suitable for trekking.",
+                "citations": [
+                    {
+                        "title": "Kalsubai Mountain",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/"
+                    },
+                    {
+                        "title": "Harishchandragad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Anjaneri Hills",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/"
+                    },
+                    {
+                        "title": "Ratangad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.5682116150856018
+                    },
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.5892481803894043
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.5943723917007446
+                    },
+                    {
+                        "content": "Destination: Pandavleni Caves District: Nashik Category: heritage Best Season: winter How to Reach: Reach the Pandavleni hill area by road from Nashik city. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Pandavleni Caves",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.6153427958488464
+                    },
+                    {
+                        "content": "Destination: Ratangad Fort District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Ratanwadi village and trek to the fort. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Ratangad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.6166645884513855
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 0.75,
+                "response_time_seconds": 0.9781
+            },
+            {
+                "id": 2,
+                "question": "Which nature destinations are available in Ahilyanagar?",
+                "answerable": true,
+                "answer": "Rehkuri Blackbuck Sanctuary, Nilwande Dam",
+                "citations": [
+                    {
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Nilwande Dam",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.3234645128250122
+                    },
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.3393014669418335
+                    },
+                    {
+                        "content": "Destination: Sandhan Valley District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Samrad village and arrange a guided trek. Official Details: {} Source: https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+                        "title": "Sandhan Valley",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+                        "cosine_distance": 0.36158764362335205
+                    },
+                    {
+                        "content": "Destination: Rehkuri Blackbuck Sanctuary District: Ahilyanagar Category: nature Best Season: winter How to Reach: Reach Rehkuri village by road. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.3631523847579956
+                    },
+                    {
+                        "content": "Destination: Nilwande Dam District: Ahilyanagar Category: nature Best Season: monsoon and winter How to Reach: Reach the dam area by road from the Akole region. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Nilwande Dam",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.3770737051963806
+                    }
+                ],
+                "retrieval_keyword_recall": 0.5,
+                "answer_keyword_coverage": 0.5,
+                "citation_coverage": 0.3333333333333333,
+                "response_time_seconds": 0.7687
+            },
+            {
+                "id": 3,
+                "question": "Which destinations are suitable for winter?",
+                "answerable": true,
+                "answer": "Harishchandragad Fort, Someshwar, Rehkuri Blackbuck Sanctuary, Pandavleni Caves, Trimbakeshwar Temple",
+                "citations": [
+                    {
+                        "title": "Harishchandragad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Someshwar",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Pandavleni Caves",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Trimbakeshwar Temple",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.5639954209327698
+                    },
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.5825299024581909
+                    },
+                    {
+                        "content": "Destination: Rehkuri Blackbuck Sanctuary District: Ahilyanagar Category: nature Best Season: winter How to Reach: Reach Rehkuri village by road. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.583889901638031
+                    },
+                    {
+                        "content": "Destination: Pandavleni Caves District: Nashik Category: heritage Best Season: winter How to Reach: Reach the Pandavleni hill area by road from Nashik city. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Pandavleni Caves",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.5961573123931885
+                    },
+                    {
+                        "content": "Destination: Trimbakeshwar Temple District: Nashik Category: religious Best Season: winter How to Reach: Approximately 28 km from Nashik; buses and road transport available. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Trimbakeshwar Temple",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.6021707057952881
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 0.6666666666666666,
+                "citation_coverage": 1.0,
+                "response_time_seconds": 1.1303
+            },
+            {
+                "id": 4,
+                "question": "Suggest heritage attractions in Chhatrapati Sambhajinagar.",
+                "answerable": true,
+                "answer": "Heritage attractions in Chhatrapati Sambhajinagar include Bibi Ka Maqbara, Panchakki, and Daulatabad Fort.",
+                "citations": [
+                    {
+                        "title": "Bibi Ka Maqbara",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/"
+                    },
+                    {
+                        "title": "Panchakki",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/"
+                    },
+                    {
+                        "title": "Daulatabad Fort",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Bibi Ka Maqbara District: Chhatrapati Sambhajinagar Category: heritage Best Season: winter How to Reach: Located within Sambhajinagar city; accessible by local transport. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Bibi Ka Maqbara",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "heritage",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.23814743757247925
+                    },
+                    {
+                        "content": "Destination: Panchakki District: Chhatrapati Sambhajinagar Category: heritage Best Season: winter How to Reach: Located within Sambhajinagar city; accessible by road. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Panchakki",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "heritage",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.2551819086074829
+                    },
+                    {
+                        "content": "Destination: Daulatabad Fort District: Chhatrapati Sambhajinagar Category: heritage Best Season: winter How to Reach: Located near Daulatabad village; accessible by road. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Daulatabad Fort",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "heritage",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.31412142515182495
+                    },
+                    {
+                        "content": "Destination: Salim Ali Lake District: Chhatrapati Sambhajinagar Category: nature Best Season: winter How to Reach: Located within Sambhajinagar city; accessible by local transport. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Salim Ali Lake",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "nature",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.3175903558731079
+                    },
+                    {
+                        "content": "Destination: Mhaismal Hill Station District: Chhatrapati Sambhajinagar Category: nature Best Season: monsoon and winter How to Reach: Reach Mhaismal via Ellora by road. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Mhaismal Hill Station",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "nature",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.41313958168029785
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 1.0,
+                "response_time_seconds": 0.8907
+            },
+            {
+                "id": 5,
+                "question": "Which destinations are suitable for monsoon?",
+                "answerable": true,
+                "answer": "Dugarwadi Falls, Mhaismal Hill Station, Someshwar, Kalsubai Mountain, Mula Dam",
+                "citations": [
+                    {
+                        "title": "Dugarwadi Falls",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Mhaismal Hill Station",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/"
+                    },
+                    {
+                        "title": "Someshwar",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Kalsubai Mountain",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/"
+                    },
+                    {
+                        "title": "Mula Dam",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/mula-dam/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Dugarwadi Falls District: Nashik Category: nature Best Season: monsoon How to Reach: Reach via Trimbakeshwar and continue towards the waterfall. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Dugarwadi Falls",
+                        "district": "Nashik",
+                        "category": "nature",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.5499906539916992
+                    },
+                    {
+                        "content": "Destination: Mhaismal Hill Station District: Chhatrapati Sambhajinagar Category: nature Best Season: monsoon and winter How to Reach: Reach Mhaismal via Ellora by road. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Mhaismal Hill Station",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "nature",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.5695385932922363
+                    },
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.577696681022644
+                    },
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.5882132649421692
+                    },
+                    {
+                        "content": "Destination: Mula Dam District: Ahilyanagar Category: nature Best Season: monsoon and winter How to Reach: Reach the dam area by road from Rahuri. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place/mula-dam/",
+                        "title": "Mula Dam",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/mula-dam/",
+                        "cosine_distance": 0.5918651223182678
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 1.0,
+                "response_time_seconds": 1.2256
+            },
+            {
+                "id": 6,
+                "question": "What is the current bus fare from Nashik to Bhandardara?",
+                "answerable": false,
+                "answer": "I don't know",
+                "citations": [],
+                "retrieved_chunks": [
+                    {
+                        "content": "Transport Corporation Bus Stand.']} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+                        "title": "Bhandardara",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+                        "cosine_distance": 0.3281370997428894
+                    },
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.3572084903717041
+                    },
+                    {
+                        "content": "Destination: Trimbakeshwar Temple District: Nashik Category: religious Best Season: winter How to Reach: Approximately 28 km from Nashik; buses and road transport available. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Trimbakeshwar Temple",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.41225868463516235
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.5006769299507141
+                    },
+                    {
+                        "content": "Destination: Bhandardara District: Ahilyanagar Category: nature Best Season: monsoon and winter How to Reach: Reach via Igatpuri or Ghoti by road. Official Details: {'place': 'Bhandardara', 'category': 'Natural / Scenic beauty, Recreational', 'description': ['Bhandardara Dam also known as Wilson Dam has its existence on Pravara River and is situated 150 metres above ground level. This dam is located in holiday resort village of Bhandardara on the western coast of India. This lies in Ahmednagar district of Maharashtra.Arthur Lake is formed due to the construction of Wilson Dam and is fed by Pravara River. This lake is also known as Lake Arthur Hill or Bhandardara Lake.Bhandardara is among the major tourist attractions in India and has the presence of natural beauty, waterfalls, mountains, greenery, invigorating air and pristine ambience.', 'A huge waterfall in Randha village on Pravara river, 10 km away from the village of Shendi, is famous as the Randhha Falls, following the name of the village. Currently, this waterfall is found only in rainy season due to hydropower project. During the rainy season, the waterfall forms a very hug. On the right side of the main waterfall in the rainy season, another waterfall is seen. Watching both waterfalls s a thrilling experience.10 km from Bhandardara bus stand, 156 km from Pune and 177 km from Mumbai, Randhada waterfalls are in Ahmednagar district of Maharashtra.', 'A large circular waterfall on Wilson Damm,\\xa0 known as ‘umbrella fall’ due to its characteristic shape. This umbrella falls seen only in the months from July to October.Around 500 meters from the Bhandardara bus station, the Ambrella Falls is a beautiful Seasonal waterfalls situated at Bhandaranara (Wilson) in Ahmednagar district.', 'Nearest airports are Aurangabad and Pune. Airport Shirdi (limited flights).', 'Ahmednagar is nearest railway station.', 'Regular State Transport Buses are available from Any Maharashtra State Road",
+                        "title": "Bhandardara",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+                        "cosine_distance": 0.5413593053817749
+                    }
+                ],
+                "retrieval_keyword_recall": null,
+                "answer_keyword_coverage": null,
+                "citation_coverage": 0.0,
+                "response_time_seconds": 0.7892
+            },
+            {
+                "id": 7,
+                "question": "How can I reach Pandavleni Caves?",
+                "answerable": true,
+                "answer": "Reach the Pandavleni hill area by road from Nashik city.",
+                "citations": [
+                    {
+                        "title": "Pandavleni Caves",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Pandavleni Caves District: Nashik Category: heritage Best Season: winter How to Reach: Reach the Pandavleni hill area by road from Nashik city. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Pandavleni Caves",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.4046209454536438
+                    },
+                    {
+                        "content": "Destination: Rehkuri Blackbuck Sanctuary District: Ahilyanagar Category: nature Best Season: winter How to Reach: Reach Rehkuri village by road. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.6236581802368164
+                    },
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.6626079678535461
+                    },
+                    {
+                        "content": "Destination: Dugarwadi Falls District: Nashik Category: nature Best Season: monsoon How to Reach: Reach via Trimbakeshwar and continue towards the waterfall. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Dugarwadi Falls",
+                        "district": "Nashik",
+                        "category": "nature",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.6696745157241821
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.6740638613700867
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 0.5,
+                "citation_coverage": 0.25,
+                "response_time_seconds": 0.8399
+            },
+            {
+                "id": 8,
+                "question": "Which religious destinations are available near Nashik?",
+                "answerable": true,
+                "answer": "Someshwar, Trimbakeshwar Temple, Kushavart Tirtha",
+                "citations": [
+                    {
+                        "title": "Someshwar",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Trimbakeshwar Temple",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/"
+                    },
+                    {
+                        "title": "Kushavart Tirtha",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.28177863359451294
+                    },
+                    {
+                        "content": "Destination: Trimbakeshwar Temple District: Nashik Category: religious Best Season: winter How to Reach: Approximately 28 km from Nashik; buses and road transport available. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Trimbakeshwar Temple",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.2962911128997803
+                    },
+                    {
+                        "content": "Destination: Gargoti Museum District: Nashik Category: heritage Best Season: all year How to Reach: Located in Sinnar; accessible by road from Nashik. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Gargoti Museum",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.3346378803253174
+                    },
+                    {
+                        "content": "Destination: Kushavart Tirtha District: Nashik Category: religious Best Season: winter How to Reach: Located in Trimbakeshwar town, near Trimbakeshwar Temple. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Kushavart Tirtha",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.353564977645874
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.41782236099243164
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 0.6666666666666666,
+                "response_time_seconds": 1.3023
+            },
+            {
+                "id": 9,
+                "question": "Which destinations involve trekking to a hill or fort?",
+                "answerable": true,
+                "answer": "Harishchandragad Fort, Ratangad Fort, Anjaneri Hills",
+                "citations": [
+                    {
+                        "title": "Harishchandragad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Ratangad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Anjaneri Hills",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.4916718006134033
+                    },
+                    {
+                        "content": "Destination: Ratangad Fort District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Ratanwadi village and trek to the fort. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Ratangad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.5170342326164246
+                    },
+                    {
+                        "content": "Destination: Pandavleni Caves District: Nashik Category: heritage Best Season: winter How to Reach: Reach the Pandavleni hill area by road from Nashik city. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Pandavleni Caves",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.5329305529594421
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.5441569089889526
+                    },
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.5615151524543762
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 0.6666666666666666,
+                "response_time_seconds": 1.0369
+            },
+            {
+                "id": 10,
+                "question": "Suggest destinations for wildlife and nature lovers.",
+                "answerable": true,
+                "answer": "Dugarwadi Falls and Rehkuri Blackbuck Sanctuary are great options for wildlife and nature lovers.",
+                "citations": [
+                    {
+                        "title": "Dugarwadi Falls",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Dugarwadi Falls District: Nashik Category: nature Best Season: monsoon How to Reach: Reach via Trimbakeshwar and continue towards the waterfall. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Dugarwadi Falls",
+                        "district": "Nashik",
+                        "category": "nature",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.5745452642440796
+                    },
+                    {
+                        "content": "Destination: Rehkuri Blackbuck Sanctuary District: Ahilyanagar Category: nature Best Season: winter How to Reach: Reach Rehkuri village by road. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.5922694206237793
+                    },
+                    {
+                        "content": "Destination: Pandavleni Caves District: Nashik Category: heritage Best Season: winter How to Reach: Reach the Pandavleni hill area by road from Nashik city. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Pandavleni Caves",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.6019542813301086
+                    },
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.6328868269920349
+                    },
+                    {
+                        "content": "Destination: Gargoti Museum District: Nashik Category: heritage Best Season: all year How to Reach: Located in Sinnar; accessible by road from Nashik. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Gargoti Museum",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.6334779262542725
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 0.6666666666666666,
+                "response_time_seconds": 0.8727
+            },
+            {
+                "id": 11,
+                "question": "Which destinations have historical architecture?",
+                "answerable": true,
+                "answer": "Gargoti Museum, Pandavleni Caves",
+                "citations": [
+                    {
+                        "title": "Gargoti Museum",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/"
+                    },
+                    {
+                        "title": "Pandavleni Caves",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Gargoti Museum District: Nashik Category: heritage Best Season: all year How to Reach: Located in Sinnar; accessible by road from Nashik. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Gargoti Museum",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.5918880701065063
+                    },
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.6487889885902405
+                    },
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.6553106307983398
+                    },
+                    {
+                        "content": "Destination: Pandavleni Caves District: Nashik Category: heritage Best Season: winter How to Reach: Reach the Pandavleni hill area by road from Nashik city. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Pandavleni Caves",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.6696718335151672
+                    },
+                    {
+                        "content": "Transport Corporation Bus Stand.']} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+                        "title": "Bhandardara",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place/bhandardara/",
+                        "cosine_distance": 0.687743067741394
+                    }
+                ],
+                "retrieval_keyword_recall": 0.3333333333333333,
+                "answer_keyword_coverage": 0.3333333333333333,
+                "citation_coverage": 0.4,
+                "response_time_seconds": 0.8853
+            },
+            {
+                "id": 12,
+                "question": "Suggest weekend destinations around Nashik.",
+                "answerable": true,
+                "answer": "Weekend destinations around Nashik include Someshwar, Dugarwadi Falls, Trimbakeshwar Temple, Gargoti Museum, and Anjaneri Hills.",
+                "citations": [
+                    {
+                        "title": "Someshwar",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Dugarwadi Falls",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    },
+                    {
+                        "title": "Trimbakeshwar Temple",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/"
+                    },
+                    {
+                        "title": "Gargoti Museum",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/"
+                    },
+                    {
+                        "title": "Anjaneri Hills",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.30785292387008667
+                    },
+                    {
+                        "content": "Destination: Dugarwadi Falls District: Nashik Category: nature Best Season: monsoon How to Reach: Reach via Trimbakeshwar and continue towards the waterfall. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Dugarwadi Falls",
+                        "district": "Nashik",
+                        "category": "nature",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.3618190288543701
+                    },
+                    {
+                        "content": "Destination: Trimbakeshwar Temple District: Nashik Category: religious Best Season: winter How to Reach: Approximately 28 km from Nashik; buses and road transport available. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Trimbakeshwar Temple",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.36194372177124023
+                    },
+                    {
+                        "content": "Destination: Gargoti Museum District: Nashik Category: heritage Best Season: all year How to Reach: Located in Sinnar; accessible by road from Nashik. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Gargoti Museum",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.3636072278022766
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.38383394479751587
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 1.0,
+                "response_time_seconds": 0.8174
+            },
+            {
+                "id": 13,
+                "question": "How can I reach Kalsubai Mountain?",
+                "answerable": true,
+                "answer": "Reach Bari village by road; trek to the summit.",
+                "citations": [
+                    {
+                        "title": "Kalsubai Mountain",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.4118356704711914
+                    },
+                    {
+                        "content": "Destination: Mhaismal Hill Station District: Chhatrapati Sambhajinagar Category: nature Best Season: monsoon and winter How to Reach: Reach Mhaismal via Ellora by road. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Mhaismal Hill Station",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "nature",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.5349388122558594
+                    },
+                    {
+                        "content": "Destination: Salim Ali Lake District: Chhatrapati Sambhajinagar Category: nature Best Season: winter How to Reach: Located within Sambhajinagar city; accessible by local transport. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Salim Ali Lake",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "nature",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.5525970458984375
+                    },
+                    {
+                        "content": "Destination: Bibi Ka Maqbara District: Chhatrapati Sambhajinagar Category: heritage Best Season: winter How to Reach: Located within Sambhajinagar city; accessible by local transport. Official Details: {} Source: https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "title": "Bibi Ka Maqbara",
+                        "district": "Chhatrapati Sambhajinagar",
+                        "category": "heritage",
+                        "source_url": "https://maharashtratourism.gov.in/districts/chhatrapati-sambhajinagar/",
+                        "cosine_distance": 0.5611714124679565
+                    },
+                    {
+                        "content": "Destination: Nilwande Dam District: Ahilyanagar Category: nature Best Season: monsoon and winter How to Reach: Reach the dam area by road from the Akole region. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Nilwande Dam",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.5623925924301147
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 0.6666666666666666,
+                "citation_coverage": 0.3333333333333333,
+                "response_time_seconds": 1.015
+            },
+            {
+                "id": 14,
+                "question": "Which nature destinations are available in Nashik?",
+                "answerable": true,
+                "answer": "Dugarwadi Falls",
+                "citations": [
+                    {
+                        "title": "Dugarwadi Falls",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Someshwar District: Nashik Category: religious Best Season: winter and monsoon How to Reach: Approximately 8 km from Nashik Central Bus Stand. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Someshwar",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.2964409589767456
+                    },
+                    {
+                        "content": "Destination: Dugarwadi Falls District: Nashik Category: nature Best Season: monsoon How to Reach: Reach via Trimbakeshwar and continue towards the waterfall. Official Details: {} Source: https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "title": "Dugarwadi Falls",
+                        "district": "Nashik",
+                        "category": "nature",
+                        "source_url": "https://nashik.gov.in/en/tourism/places-of-interest/",
+                        "cosine_distance": 0.3253241777420044
+                    },
+                    {
+                        "content": "Destination: Gargoti Museum District: Nashik Category: heritage Best Season: all year How to Reach: Located in Sinnar; accessible by road from Nashik. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Gargoti Museum",
+                        "district": "Nashik",
+                        "category": "heritage",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.34881436824798584
+                    },
+                    {
+                        "content": "Destination: Anjaneri Hills District: Nashik Category: adventure Best Season: winter and monsoon How to Reach: Reach Anjaneri village by road and trek uphill. Official Details: {} Source: https://maharashtratourism.gov.in/districts/nashik/",
+                        "title": "Anjaneri Hills",
+                        "district": "Nashik",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/nashik/",
+                        "cosine_distance": 0.3566625118255615
+                    },
+                    {
+                        "content": "Destination: Trimbakeshwar Temple District: Nashik Category: religious Best Season: winter How to Reach: Approximately 28 km from Nashik; buses and road transport available. Official Details: {} Source: https://nashik.gov.in/en/tourism/tourists-places/",
+                        "title": "Trimbakeshwar Temple",
+                        "district": "Nashik",
+                        "category": "religious",
+                        "source_url": "https://nashik.gov.in/en/tourism/tourists-places/",
+                        "cosine_distance": 0.36860883235931396
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 0.5,
+                "citation_coverage": 0.3333333333333333,
+                "response_time_seconds": 0.9594
+            },
+            {
+                "id": 15,
+                "question": "Suggest adventure destinations in Ahilyanagar suitable for winter.",
+                "answerable": true,
+                "answer": "Harishchandragad Fort, Kalsubai Mountain, Sandhan Valley, Ratangad Fort.",
+                "citations": [
+                    {
+                        "title": "Harishchandragad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    },
+                    {
+                        "title": "Kalsubai Mountain",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/"
+                    },
+                    {
+                        "title": "Sandhan Valley",
+                        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/"
+                    },
+                    {
+                        "title": "Ratangad Fort",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/"
+                    }
+                ],
+                "retrieved_chunks": [
+                    {
+                        "content": "Destination: Harishchandragad Fort District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Khireshwar or another established base village and trek. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Harishchandragad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.30496644973754883
+                    },
+                    {
+                        "content": "Destination: Kalsubai Mountain District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Bari village by road; trek to the summit. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "title": "Kalsubai Mountain",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-place-category/adventure/",
+                        "cosine_distance": 0.3414483666419983
+                    },
+                    {
+                        "content": "Destination: Sandhan Valley District: Ahilyanagar Category: adventure Best Season: winter How to Reach: Reach Samrad village and arrange a guided trek. Official Details: {} Source: https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+                        "title": "Sandhan Valley",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://maharashtratourism.gov.in/districts/ahilya-nagar/",
+                        "cosine_distance": 0.35076993703842163
+                    },
+                    {
+                        "content": "Destination: Rehkuri Blackbuck Sanctuary District: Ahilyanagar Category: nature Best Season: winter How to Reach: Reach Rehkuri village by road. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Rehkuri Blackbuck Sanctuary",
+                        "district": "Ahilyanagar",
+                        "category": "nature",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.3798099756240845
+                    },
+                    {
+                        "content": "Destination: Ratangad Fort District: Ahilyanagar Category: adventure Best Season: monsoon and winter How to Reach: Reach Ratanwadi village and trek to the fort. Official Details: {} Source: https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "title": "Ratangad Fort",
+                        "district": "Ahilyanagar",
+                        "category": "adventure",
+                        "source_url": "https://ahilyanagar.maharashtra.gov.in/en/tourist-places/",
+                        "cosine_distance": 0.38374388217926025
+                    }
+                ],
+                "retrieval_keyword_recall": 1.0,
+                "answer_keyword_coverage": 1.0,
+                "citation_coverage": 1.0,
+                "response_time_seconds": 4.9002
+            }
+        ]
+    },
+    "winner": "Configuration B"
+}
