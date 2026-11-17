@@ -9,12 +9,13 @@ from app.smart_search import search_destinations
 from app.llm import generate_response, load_system_prompt
 from app.vectorstore import semantic_search as search_semantically
 from app.rag import ask_question
+from app.graph import run_graph_agent
 
 
 app = FastAPI(
     title="WeekendYatri API",
     description="AI-powered weekend travel destination assistant",
-    version="2.2.0"
+    version="2.3.0"
 )
 
 
@@ -39,6 +40,25 @@ class AskResponse(BaseModel):
     answer: str
     citations: list[dict]
     retrieved_chunks: list[dict]
+
+
+# ---------- Day 9: LangGraph Agent Request ----------
+
+class AgentRequest(BaseModel):
+    message: str = Field(min_length=2, max_length=1000)
+    thread_id: str = Field(min_length=1, max_length=100)
+
+    round_trip_km: float | None = Field(default=None, gt=0)
+    people: int | None = Field(default=None, ge=1)
+    mode: str | None = None
+
+    stay_per_person: float = Field(default=0, ge=0)
+    food_per_person: float = Field(default=0, ge=0)
+
+    mileage_kmpl: float | None = Field(default=None, gt=0)
+    fuel_price_per_litre: float | None = Field(default=None, gt=0)
+
+    approved: bool | None = None
 
 
 # ---------- Existing API Endpoints ----------
@@ -152,7 +172,6 @@ def semantic_search_records(
 @app.post("/chat", response_model=ChatResponse)
 def chat_with_yatri(request: ChatRequest):
 
-    # Step 1: Retrieve relevant destinations
     results = search_destinations(
         request.message,
         top_n=5
@@ -171,12 +190,10 @@ def chat_with_yatri(request: ChatRequest):
             )
         )
 
-    # Step 2: Calculate retrieval score
     retrieval_score = max(
         item["similarity_score"] for item in results
     )
 
-    # Step 3: Load complete destination information
     records = load_records()
 
     retrieved_places = {
@@ -188,7 +205,6 @@ def chat_with_yatri(request: ChatRequest):
         if record.place in retrieved_places
     ]
 
-    # Step 4: Build context for the LLM
     context = [
         {
             "place": record.place,
@@ -202,7 +218,6 @@ def chat_with_yatri(request: ChatRequest):
         for record in context_records
     ]
 
-    # Step 5: Prepare the grounded prompt
     system_prompt = load_system_prompt()
 
     user_message = f"""
@@ -218,7 +233,6 @@ Return the required JSON response with answer and follow_up.
 Do not include a confidence or retrieval score.
 """
 
-    # Step 6: Generate AI response
     try:
         llm_response = generate_response(
             system_prompt,
@@ -251,8 +265,8 @@ Do not include a confidence or retrieval score.
 @app.post("/ask", response_model=AskResponse)
 def ask_weekendyatri(request: AskRequest):
     """
-    Answer WeekendYatri questions using retrieved ChromaDB
-    chunks, Groq generation and source citations.
+    Answer questions using retrieved ChromaDB chunks,
+    Groq generation and source citations.
     """
 
     try:
@@ -277,4 +291,103 @@ def ask_weekendyatri(request: AskRequest):
         raise HTTPException(
             status_code=502,
             detail=f"RAG service error: {str(error)}"
+        )
+
+
+# ---------- Day 9: LangGraph Agent API ----------
+
+@app.post("/agent")
+def weekendyatri_agent(request: AgentRequest):
+    """
+    Run the LangGraph WeekendYatri agent.
+
+    Supports:
+    1. RAG destination questions.
+    2. Trip cost calculations.
+    3. Human approval before cost calculation.
+    4. Conversation memory using thread_id.
+    """
+
+    message_lower = request.message.lower()
+
+    cost_keywords = [
+        "cost",
+        "budget",
+        "expense",
+        "calculate",
+        "estimate",
+        "price",
+        "afford"
+    ]
+
+    wants_cost = any(
+        keyword in message_lower
+        for keyword in cost_keywords
+    )
+
+    # Validate required cost information
+    if wants_cost and request.approved is not True and request.approved is not False:
+
+        if (
+            request.round_trip_km is None
+            or request.people is None
+            or request.mode is None
+        ):
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Cost calculation requires round_trip_km, "
+                    "people and mode."
+                )
+            )
+
+        if request.mode not in ("own_car", "msrtc_bus"):
+            raise HTTPException(
+                status_code=400,
+                detail="Mode must be own_car or msrtc_bus."
+            )
+
+        if request.mode == "own_car":
+
+            if (
+                request.mileage_kmpl is None
+                or request.fuel_price_per_litre is None
+            ):
+                raise HTTPException(
+                    status_code=400,
+                    detail=(
+                        "Own car calculation requires "
+                        "mileage_kmpl and fuel_price_per_litre."
+                    )
+                )
+
+    try:
+        result = run_graph_agent(
+            message=request.message,
+            thread_id=request.thread_id,
+            round_trip_km=request.round_trip_km,
+            people=request.people,
+            mode=request.mode,
+            stay_per_person=request.stay_per_person,
+            food_per_person=request.food_per_person,
+            mileage_kmpl=request.mileage_kmpl,
+            fuel_price_per_litre=request.fuel_price_per_litre,
+            approved=request.approved
+        )
+
+        return {
+            "agent": "WeekendYatri",
+            **result
+        }
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Agent execution error: {str(error)}"
         )

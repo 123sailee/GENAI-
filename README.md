@@ -124,6 +124,7 @@ The FastAPI backend provides:
 | `/chat` | POST | Ask the AI travel assistant |
 | `/questions` | POST | Submit travel questions |
 | `/ask` | POST | Ask questions using retrieval-augmented generation |
+| `/agent` | POST | Run the LangGraph-powered travel agent with RAG, cost estimation, memory and human approval |
 
 ## 10. RAG Evaluation and Configuration Comparison
 
@@ -180,3 +181,79 @@ The overall score is a project-defined evaluation metric.
 ## 11. Project Repository
 
 The project source code, evaluation scripts and documentation are maintained in the **GENAI-** repository.
+## 12. Day 9 – Agentic AI Workflow
+
+WeekendYatri now includes an agentic AI workflow that combines RAG-based destination discovery, trip cost estimation, conversational memory and human approval.
+
+### 12.1 Cost Estimation Tool
+
+File: `app/tools.py`
+
+The `weekend_trip_cost` tool estimates weekend trip expenses based on:
+
+- Round-trip distance in kilometres
+- Number of travellers
+- Travel mode (own car or MSRTC bus)
+- Stay budget per person
+- Food budget per person
+
+**Own Car Calculation:**
+
+Transport Cost = (Round-trip Distance / Mileage) × Fuel Price
+
+**MSRTC Bus Calculation:**
+
+Transport Cost = Round-trip Distance × Applicable Fare per KM
+
+The fare slabs are stored in `data/msrtc_fares.csv`. These are illustrative estimates, not official MSRTC tariffs.
+
+The tool returns transport cost, stay cost, food cost, total group cost and cost per person.
+
+### 12.2 Handwritten Agent
+
+File: `app/agent_loop.py`
+
+The hand-written agent identifies the user's request and selects the appropriate tool:
+
+- RAG search for destination-related questions.
+- `weekend_trip_cost` for trip expense calculations.
+
+### 12.3 LangGraph Workflow
+
+File: `app/graph.py`
+
+The agent workflow is implemented using LangGraph and includes:
+
+- Intent detection
+- Conversation history and memory
+- RAG retrieval
+- Trip cost calculation
+- Human approval checkpoint
+- Approval and rejection handling
+
+The workflow uses `MemorySaver` with thread IDs to maintain conversation state across requests.
+
+### 12.4 Human Approval
+
+Before calculating trip costs, the agent pauses and requests user approval.
+
+- If approved, the cost calculation proceeds.
+- If rejected, the calculation is not performed.
+
+### 12.5 Agent API
+
+Endpoint: `POST /agent`
+
+The endpoint supports destination questions, trip cost estimation, conversation memory and approval-based execution.
+
+Test the endpoint using the interactive Swagger documentation at:
+
+`http://127.0.0.1:8000/docs`
+
+### 12.6 Day 9 Files
+
+- `app/tools.py` – Trip cost estimation tool.
+- `app/agent_loop.py` – Handwritten agent implementation.
+- `app/graph.py` – LangGraph workflow.
+- `data/msrtc_fares.csv` – Illustrative MSRTC fare slabs.
+- `app/main.py` – FastAPI agent endpoint.
