@@ -7,14 +7,13 @@ if __package__ in (None, ""):
         sys.path.insert(0, project_root)
 
 from app.records import (
-    load_records,
-    search,
-    count_by,
-    get_by_id,
     clean_records,
+    count_by,
     filter_by_category,
     filter_by_district,
-    sort_by_place,
+    get_by_id,
+    load_records,
+    search,
 )
 
 
@@ -65,8 +64,6 @@ def main():
             print("\nCategory Summary:")
             for category, total in counts.items():
                 print(f"{category}: {total}")
-
-
 
         elif choice == "4":
             try:
@@ -127,12 +124,13 @@ def main():
             print("Invalid choice. Try again.")
 
 
-if __name__ == "__main__":
-    main()
-
 def sort_by_place(records, reverse=False):
     return sorted(
         records,
         key=lambda record: record.place.lower(),
         reverse=reverse
     )
+
+
+if __name__ == "__main__":
+    main()

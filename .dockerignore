@@ -1,0 +1,13 @@
+@"
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+.pytest_cache
+.ruff_cache
+*.zip
+.env
+"@ | Set-Content -Path .dockerignore -Encoding UTF8

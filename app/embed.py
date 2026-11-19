@@ -3,7 +3,6 @@ from sentence_transformers import SentenceTransformer
 
 from app.chunking import create_chunks
 
-
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 

@@ -6,7 +6,6 @@ from sentence_transformers import SentenceTransformer
 
 from app.chunking import create_chunks
 
-
 # Project configuration
 BASE_DIR = Path(__file__).resolve().parent.parent
 

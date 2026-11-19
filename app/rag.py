@@ -1,9 +1,8 @@
 
 import json
 
-from app.llm import generate_response, load_system_prompt
+from app.llm import generate_response
 from app.vectorstore import semantic_search
-
 
 RAG_SYSTEM_PROMPT = """
 You are WeekendYatri, a travel information assistant.

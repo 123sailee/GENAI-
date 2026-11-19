@@ -1,6 +1,7 @@
 
-import requests
 from pathlib import Path
+
+import requests
 
 # Folder to store downloaded HTML files
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"

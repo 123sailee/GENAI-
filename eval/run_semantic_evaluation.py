@@ -3,7 +3,6 @@ from pathlib import Path
 
 from app.vectorstore import semantic_search
 
-
 # Project paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_FILE = BASE_DIR / "eval" / "search_results.md"
@@ -108,7 +107,7 @@ def run_evaluation():
         "## Evaluation Summary",
         "",
         f"- Questions evaluated: {len(QUESTIONS)}",
-        f"- Maximum results per question: 5",
+        "- Maximum results per question: 5",
         f"- Total retrieval results: {total_results}",
         "",
         "## Observations",

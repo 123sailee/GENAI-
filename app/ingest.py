@@ -1,6 +1,7 @@
 
 import json
 from pathlib import Path
+
 from bs4 import BeautifulSoup
 
 BASE_DIR = Path(__file__).resolve().parents[1]
@@ -118,7 +119,7 @@ def clean_record(record):
 def ingest_records():
     """Load, validate, enrich and save destination records."""
 
-    with open(INPUT_FILE, "r", encoding="utf-8") as file:
+    with open(INPUT_FILE, encoding="utf-8") as file:
         raw_records = json.load(file)
 
     source_text = {}

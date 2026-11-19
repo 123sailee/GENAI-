@@ -3,7 +3,6 @@ import csv
 import math
 from pathlib import Path
 
-
 # Project directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +21,6 @@ def get_bus_fare_per_km(round_trip_km):
     try:
         with open(
             FARE_CSV,
-            "r",
             newline="",
             encoding="utf-8-sig"
         ) as file:

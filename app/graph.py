@@ -1,14 +1,13 @@
 
-from typing import TypedDict, Optional, Annotated
 import operator
+from typing import Annotated, TypedDict
 
-from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.types import interrupt, Command
+from langgraph.graph import END, START, StateGraph
+from langgraph.types import Command, interrupt
 
 from app.rag import ask_question
 from app.tools import weekend_trip_cost
-
 
 # ----------------------------------
 # 1. Define Agent State
@@ -31,8 +30,8 @@ class WeekendYatriState(TypedDict, total=False):
     stay_per_person: float
     food_per_person: float
 
-    mileage_kmpl: Optional[float]
-    fuel_price_per_litre: Optional[float]
+    mileage_kmpl: float | None
+    fuel_price_per_litre: float | None
 
     approved: bool
     result: dict

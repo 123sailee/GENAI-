@@ -4,13 +4,12 @@ import json
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
 
+from app.graph import run_graph_agent
+from app.llm import generate_response, load_system_prompt
+from app.rag import ask_question
 from app.records import load_records
 from app.smart_search import search_destinations
-from app.llm import generate_response, load_system_prompt
 from app.vectorstore import semantic_search as search_semantically
-from app.rag import ask_question
-from app.graph import run_graph_agent
-
 
 app = FastAPI(
     title="WeekendYatri API",

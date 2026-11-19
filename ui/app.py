@@ -1,12 +1,12 @@
 import html
 import json
+import os
 import uuid
 from datetime import datetime
 from pathlib import Path
 
 import requests
 import streamlit as st
-
 
 # ==================================================
 # 1. CONFIGURATION
@@ -17,7 +17,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT_DIR / "data" / "records.json"
 FEEDBACK_FILE = ROOT_DIR / "data" / "feedback.jsonl"
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 st.set_page_config(
     page_title="WeekendYatri | Weekend Travel Assistant",
@@ -33,7 +33,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_destinations():
-    with open(DATA_FILE, "r", encoding="utf-8") as file:
+    with open(DATA_FILE, encoding="utf-8") as file:
         return json.load(file)
 
 

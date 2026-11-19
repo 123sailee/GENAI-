@@ -6,7 +6,6 @@ import chromadb
 from app.chunking import create_chunks
 from app.vectorstore import get_model
 
-
 # Project configuration
 BASE_DIR = Path(__file__).resolve().parent.parent
 

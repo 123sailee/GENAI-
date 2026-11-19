@@ -9,7 +9,6 @@ import chromadb
 from app.llm import generate_response
 from app.vectorstore import get_model
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 DB_DIR = BASE_DIR / "data" / "rag_eval_db"
@@ -78,13 +77,13 @@ For an unanswerable question:
 
 
 def load_questions():
-    with open(DATASET_FILE, "r", encoding="utf-8") as file:
+    with open(DATASET_FILE, encoding="utf-8") as file:
         return json.load(file)
 
 
 def load_progress():
     if PROGRESS_FILE.exists():
-        with open(PROGRESS_FILE, "r", encoding="utf-8") as file:
+        with open(PROGRESS_FILE, encoding="utf-8") as file:
             return json.load(file)
 
     return {

@@ -257,3 +257,13 @@ Test the endpoint using the interactive Swagger documentation at:
 - `app/graph.py` – LangGraph workflow.
 - `data/msrtc_fares.csv` – Illustrative MSRTC fare slabs.
 - `app/main.py` – FastAPI agent endpoint.
+
+![alt text](image.png)
+
+## Run with Docker
+
+1. Ensure your `.env` file is present in the project root with your required API keys (e.g., `GROQ_API_KEY`).
+2. Build and start both the FastAPI backend and Streamlit UI containers:
+
+```bash
+docker compose up --build

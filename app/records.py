@@ -8,7 +8,7 @@ DATA_FILE = Path(__file__).resolve().parents[1] / "data" / "records.json"
 
 
 def load_records():
-    with open(DATA_FILE, "r", encoding="utf-8") as file:
+    with open(DATA_FILE, encoding="utf-8") as file:
         data = json.load(file)
 
     records = []

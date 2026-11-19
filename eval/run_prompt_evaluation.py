@@ -6,7 +6,6 @@ from app.llm import generate_response, load_system_prompt
 from app.records import load_records
 from app.smart_search import search_destinations
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 EVAL_DIR = BASE_DIR / "eval"
 
