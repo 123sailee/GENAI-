@@ -3,6 +3,7 @@
 **Student:** Sailee Abhale  
 **Department:** CSE (Data Science)  
 **Project ID:** SJ-54
+![CI](https://github.com/123sailee/GENAI-/actions/workflows/ci.yml/badge.svg)
 
 ## 1. Product
 
