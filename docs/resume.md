@@ -1,0 +1,5 @@
+﻿# WeekendYatri — Resume Bullets
+
+- **Engineered an end-to-end Retrieval-Augmented Generation (RAG) & LangGraph travel assistant (`WeekendYatri`)** using FastAPI, ChromaDB (`all-MiniLM-L6-v2`), and Groq LLMs, improving retrieval recall from **73.8% to 91.7%** and weighted evaluation score from **0.744 to 0.831** across a 15-query benchmark while cutting average response latency by **64.6%** (**3.46 s → 1.23 s**).
+- **Implemented a human-in-the-loop LangGraph agent with persistent thread memory and deterministic cost tools** (MSRTC bus fare lookup + fuel/stay/food estimators), enforcing strict Pydantic input validation, regex-based prompt-injection blocking, per-request token/latency logging, and an LRU/TTL response cache (**<1 ms** cache-hit latency).
+- **Containerized and shipped the full-stack service to Hugging Face Spaces with automated GitHub Actions CI (`ruff`, `pytest`, Docker image build)**, pre-building the ChromaDB index at image build time and lazy-loading ML dependencies to keep cold-start RSS memory at **209 MB** (**596 MB** warm with embeddings loaded).
