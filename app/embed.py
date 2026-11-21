@@ -1,6 +1,3 @@
-
-from sentence_transformers import SentenceTransformer
-
 from app.chunking import create_chunks
 
 MODEL_NAME = "all-MiniLM-L6-v2"
@@ -8,6 +5,8 @@ MODEL_NAME = "all-MiniLM-L6-v2"
 
 def generate_embeddings():
     """Generate embeddings for all destination chunks."""
+    # Imported here so the server starts without loading torch
+    from sentence_transformers import SentenceTransformer
 
     chunks, metadatas, ids = create_chunks()
 

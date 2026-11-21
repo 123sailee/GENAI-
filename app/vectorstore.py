@@ -1,8 +1,4 @@
-
 from pathlib import Path
-
-import chromadb
-from sentence_transformers import SentenceTransformer
 
 from app.chunking import create_chunks
 
@@ -21,6 +17,9 @@ def get_model():
     global model
 
     if model is None:
+        # Imported here so the server starts without loading torch
+        from sentence_transformers import SentenceTransformer
+
         print("Loading embedding model:", MODEL_NAME)
         model = SentenceTransformer(MODEL_NAME)
 
@@ -29,6 +28,9 @@ def get_model():
 
 def get_collection():
     """Connect to the persistent ChromaDB collection."""
+    # Imported here so the server starts without loading chromadb
+    import chromadb
+
     client = chromadb.PersistentClient(
         path=str(CHROMA_DIR)
     )
