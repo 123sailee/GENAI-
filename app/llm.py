@@ -50,7 +50,7 @@ def clear_cache() -> None:
 
 def _cache_key(system_prompt: str, user_message: str) -> str:
     digest = hashlib.sha256(
-        f"{MODEL_NAME}::{system_prompt}::{user_message}".encode("utf-8")
+        f"{MODEL_NAME}::{system_prompt}::{user_message}".encode()
     ).hexdigest()
     return digest
 
