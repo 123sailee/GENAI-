@@ -1,5 +1,6 @@
 ﻿import gradio as gr
 import uvicorn
+
 from app.main import app as fastapi_app
 
 demo = gr.Interface(fn=lambda x: "WeekendYatri API is live! Visit /health or /docs", inputs="text", outputs="text")
