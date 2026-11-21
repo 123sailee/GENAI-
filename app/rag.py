@@ -1,7 +1,9 @@
-
-import json
+﻿import json
+import os
 
 from app.llm import generate_response
+from app.records import load_records
+from app.smart_search import search_destinations
 from app.vectorstore import semantic_search
 
 RAG_SYSTEM_PROMPT = """
@@ -41,13 +43,47 @@ If you do not know the answer, return:
 """
 
 
-def retrieve_context(question, top_k=5):
-    """Retrieve relevant destination chunks from ChromaDB."""
+def _retrieve_lightweight(question: str, top_k: int = 5) -> list[dict]:
+    """Low-memory TF-IDF/keyword retrieval fallback for <=512 MB containers."""
+    matches = search_destinations(question, top_n=top_k)
+    if not matches:
+        return []
 
-    results = semantic_search(
-        query=question,
-        top_k=top_k
-    )
+    records_by_place = {record.place: record for record in load_records()}
+    retrieved_chunks = []
+
+    for item in matches:
+        place = item.get("place", "")
+        record = records_by_place.get(place)
+        if not record:
+            continue
+
+        content = (
+            f"{record.place} ({record.district}, {record.category}). "
+            f"Best season: {record.best_season}. "
+            f"How to reach: {record.how_to_reach}. "
+            f"Details: {record.official_details}"
+        )
+        similarity = float(item.get("similarity_score", 0.0))
+        retrieved_chunks.append({
+            "content": content,
+            "title": record.place,
+            "district": record.district,
+            "category": record.category,
+            "source_url": record.source_url,
+            "page": None,
+            "cosine_distance": round(max(0.0, 1.0 - similarity), 4),
+        })
+
+    return retrieved_chunks
+
+
+def retrieve_context(question, top_k=5):
+    """Retrieve relevant destination chunks from ChromaDB or lightweight retriever."""
+    if os.getenv("USE_LIGHTWEIGHT_RETRIEVAL", "").lower() in {"1", "true", "yes"}:
+        return _retrieve_lightweight(question=question, top_k=top_k)
+
+    results = semantic_search(query=question, top_k=top_k)
 
     documents = results.get("documents", [[]])[0]
     metadatas = results.get("metadatas", [[]])[0]
@@ -56,9 +92,7 @@ def retrieve_context(question, top_k=5):
     retrieved_chunks = []
 
     for index, document in enumerate(documents):
-
         metadata = metadatas[index]
-
         retrieved_chunks.append({
             "content": document,
             "title": metadata.get("title", "Unknown"),
@@ -66,7 +100,7 @@ def retrieve_context(question, top_k=5):
             "category": metadata.get("category", "Unknown"),
             "source_url": metadata.get("source_url", ""),
             "page": metadata.get("page"),
-            "cosine_distance": float(distances[index])
+            "cosine_distance": float(distances[index]),
         })
 
     return retrieved_chunks
@@ -74,10 +108,9 @@ def retrieve_context(question, top_k=5):
 
 def ask_question(question, top_k=5):
     """
-    Answer a question using retrieved ChromaDB chunks
+    Answer a question using retrieved chunks
     and Groq, with source citations.
     """
-
     if not question or not question.strip():
         raise ValueError("Question cannot be empty.")
 
@@ -87,26 +120,19 @@ def ask_question(question, top_k=5):
     if top_k < 1 or top_k > 20:
         raise ValueError("top_k must be between 1 and 20.")
 
-    # Step 1: Retrieve relevant chunks
     retrieved_chunks = retrieve_context(
         question=question.strip(),
-        top_k=top_k
+        top_k=top_k,
     )
 
-    # Step 2: Return unknown if no context exists
     if not retrieved_chunks:
         return {
             "answer": "I don't know",
             "citations": [],
-            "retrieved_chunks": []
+            "retrieved_chunks": [],
         }
 
-    # Step 3: Prepare context for the LLM
-    context = json.dumps(
-        retrieved_chunks,
-        ensure_ascii=False,
-        indent=2
-    )
+    context = json.dumps(retrieved_chunks, ensure_ascii=False, indent=2)
 
     user_message = f"""
 Retrieved context:
@@ -125,23 +151,15 @@ Remember:
 - Return valid JSON only.
 """
 
-    # Step 4: Generate grounded answer
-    system_prompt = RAG_SYSTEM_PROMPT
+    response = generate_response(RAG_SYSTEM_PROMPT, user_message)
 
-    response = generate_response(
-        system_prompt,
-        user_message
-    )
-
-    # Step 5: Validate the LLM response
     try:
         parsed_response = json.loads(response)
-
     except json.JSONDecodeError:
         return {
             "answer": "I don't know",
             "citations": [],
-            "retrieved_chunks": retrieved_chunks
+            "retrieved_chunks": retrieved_chunks,
         }
 
     answer = parsed_response.get("answer", "I don't know")
@@ -151,7 +169,6 @@ Remember:
         answer = "I don't know"
         citations = []
 
-    # Step 6: Validate citations against retrieved sources
     valid_sources = {
         (chunk["title"], chunk["source_url"])
         for chunk in retrieved_chunks
@@ -159,9 +176,7 @@ Remember:
     }
 
     validated_citations = []
-
     for citation in citations:
-
         if not isinstance(citation, dict):
             continue
 
@@ -174,49 +189,17 @@ Remember:
         validated_citations.append({
             "title": title,
             "source_url": source_url,
-            "page": None
+            "page": None,
         })
 
-    # Step 7: Enforce the unknown response when no valid evidence exists
     if answer.strip().lower() == "i don't know":
         answer = "I don't know"
         validated_citations = []
-
     elif not validated_citations:
         answer = "I don't know"
 
     return {
         "answer": answer,
         "citations": validated_citations,
-        "retrieved_chunks": retrieved_chunks
+        "retrieved_chunks": retrieved_chunks,
     }
-
-
-if __name__ == "__main__":
-
-    test_questions = [
-        "Suggest adventure destinations suitable for trekking.",
-        "Which destinations are suitable for winter?",
-        "What is the current bus fare from Nashik to Bhandardara?"
-    ]
-
-    for question in test_questions:
-
-        print("\n" + "=" * 60)
-        print("QUESTION:", question)
-
-        try:
-            result = ask_question(question, top_k=5)
-
-            print("\nANSWER:")
-            print(result["answer"])
-
-            print("\nCITATIONS:")
-            print(json.dumps(
-                result["citations"],
-                indent=4,
-                ensure_ascii=False
-            ))
-
-        except Exception as error:
-            print("ERROR:", str(error))
