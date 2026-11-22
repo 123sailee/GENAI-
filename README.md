@@ -10,7 +10,7 @@
 - **Public Health Check:** https://weekendyatri.onrender.com/health
 - **Interactive API Docs (Swagger UI):** https://weekendyatri.onrender.com/docs
 - **Live Metrics Endpoint:** https://weekendyatri.onrender.com/metrics
-- **Demo Video Walkthrough:** [Watch 2-Minute Demo Video](https://weekendyatri.onrender.com/docs)
+- **Demo Video Walkthrough:** [Watch 90-Second Demo Video](https://drive.google.com/file/d/1PoC_7PolAYYHmrj6wtiyDWS2j_jIToBI/view?usp=sharing)
 
 ---
 
@@ -33,7 +33,7 @@ flowchart TD
     Router -->|POST /ask| Cache{LRU + TTL Response Cache}
     Router -->|POST /agent| Agent[LangGraph Stateful Agent]
 
-    Cache -->|Cache Hit < 1ms| Metrics[Latency & Token Logger /metrics]
+    Cache -->|Cache Hit 0.04 ms| Metrics[Latency & Token Logger /metrics]
     Cache -->|Cache Miss| RAG[RAG Pipeline: Top-5 Retrieval + Citations]
     RAG --> VS
     RAG --> Groq[Groq Chat Completions API]
