@@ -44,3 +44,38 @@ flowchart TD
     HITL -->|Approved| Tools[Cost Calculator & MSRTC Fare CSV]
     Tools --> Metrics
     Metrics --> Client
+---
+
+## Results
+
+Evaluated on a 15-question benchmark (14 answerable destination queries + 1 out-of-scope unanswerable query) using `all-MiniLM-L6-v2`, ChromaDB, and Groq:
+
+| Metric | Config A (`chunk=150, top_k=3`) | Config B (`chunk=300, top_k=5`) | Improvement |
+|---|---:|---:|---:|
+| **Stored Chunks** | 22 | 21 | Compact index |
+| **Retrieval Recall (40% weight)** | 0.7381 | **0.9167** | **+24.2%** |
+| **Answer Keyword Coverage (30% weight)** | 0.6667 | **0.7976** | **+19.6%** |
+| **Citation Coverage (20% weight)** | **0.7444** | 0.6267 | -15.8% |
+| **Unknown Answer Accuracy (10% weight)** | 1.0000 | **1.0000** | 100% abstention |
+| **Average Response Time** | 3.4645 s | **1.2274 s** | **64.6% faster** |
+| **Weighted Overall Score** | 0.7441 | **0.8313** | **+11.7%** |
+
+---
+
+## Production notes
+
+Measured directly on the live Render deployment (`[https://weekendyatri.onrender.com](https://weekendyatri.onrender.com)`) and local benchmarks:
+
+- **Measured Live Latency (Uncached vs. Cached):** On `POST /ask`, an uncached Groq completion (`openai/gpt-oss-20b`) takes **727.32 ms** (`1,227.4 ms` average across the 15-question benchmark), whereas a repeated query served from the in-memory LRU/TTL cache returns in **0.04 ms** (**99.99% latency reduction**).
+- **Measured Token Usage & Cache Hit Rate:** A single uncached `/ask` request consumes **1,479 total tokens** (**1,344 prompt tokens** + **135 completion tokens**); identical follow-up requests achieve a **100% cache hit** (`cache_hits: 1`, `cache_misses: 1`, **0 additional tokens**), tracked live at `GET /metrics`.
+- **Memory Footprint & 512 MB Cloud Optimization:** Lazy-importing `sentence-transformers` and `chromadb` keeps cold-start RSS memory at **209 MB** (vs. **596 MB** with PyTorch + ChromaDB loaded). Enabling `USE_LIGHTWEIGHT_RETRIEVAL=true` in `Dockerfile` keeps live Render memory well under its **512 MB** free-tier RAM limit.
+- **Input Limits & Security Guardrails:** Pydantic enforces strict request bounds (`question`/`message` `2–1,000` chars, `search` query `<=300` chars, `top_k` `1–20`, `limit` `1–100`, `round_trip_km` `<=5,000`), and `app/security.py` blocks prompt-injection / system-prompt extraction payloads with `HTTP 400`.
+
+---
+
+## Local Setup & Testing
+
+1. Create and activate a virtual environment: `python -m venv .venv && .venv\Scripts\Activate.ps1`
+2. Install dependencies and add `GROQ_API_KEY` to `.env`: `pip install -r requirements.txt`
+3. Start the server: `uvicorn app.main:app --reload --port 8000`
+4. Run lint and unit tests: `ruff check . && pytest -v`
